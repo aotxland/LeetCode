@@ -1,7 +1,7 @@
 package LinkedList;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author AoTxLand
@@ -9,14 +9,29 @@ import java.util.Map;
  */
 public class HasCycle {
     public boolean hasCycle(ListNode head) {
-        Map<ListNode,Boolean> map = new HashMap<>();
+        Set<ListNode> set = new HashSet<>();
         while(head != null){
-            if(map.containsKey(head)){
+            if(set.contains(head)){
                 return true;
             }
-            map.put(head,true);
+            set.add(head);
             head = head.next;
         }
         return false;
+    }
+    public boolean hasCycle2(ListNode head) {
+        if (head == null || head.next == null) {
+            return false;
+        }
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (slow != fast) {
+            if (fast == null || fast.next == null) {
+                return false;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return true;
     }
 }
