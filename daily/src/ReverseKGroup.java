@@ -1,5 +1,3 @@
-package Daily;
-
 /**
  * @author AoTxLand
  * @date 2020-05-16 22:32
