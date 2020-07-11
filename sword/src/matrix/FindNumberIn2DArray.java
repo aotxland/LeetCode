@@ -1,4 +1,4 @@
-package arrays;
+package matrix;
 
 /**
  * @author AoTxLand
