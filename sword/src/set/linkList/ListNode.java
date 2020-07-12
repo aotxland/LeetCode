@@ -1,4 +1,4 @@
-package arrays.linkList;
+package set.linkList;
 
 /**
  * @author AoTxLand

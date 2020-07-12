@@ -1,4 +1,4 @@
-package arrays.linkList;
+package set.linkList;
 
 import java.util.Stack;
 

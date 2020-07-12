@@ -1,4 +1,4 @@
-package arrays;
+package set;
 
 /**
  * @author AoTxLand

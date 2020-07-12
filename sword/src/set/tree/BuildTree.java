@@ -1,4 +1,4 @@
-package arrays.tree;
+package set.tree;
 
 import java.util.Arrays;
 import java.util.HashMap;
