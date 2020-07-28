@@ -1,4 +1,4 @@
-package math;
+package inspur;
 
 import java.util.Scanner;
 
