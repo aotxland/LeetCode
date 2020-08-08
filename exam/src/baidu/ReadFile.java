@@ -8,6 +8,7 @@ import java.util.*;
 public class ReadFile {
 
     public static void main(String[] args) {
+        System.out.println(new ReadFile().testFinally());
         List<String> list = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -29,5 +30,15 @@ public class ReadFile {
             System.out.print(nums[nums.length - 1][i] + ".");
         }
         System.out.println(nums[nums.length - 1][nums[nums.length - 1].length - 1]);
+    }
+
+    int testFinally(){
+        try {
+            return 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            return 0;
+        }
     }
 }
