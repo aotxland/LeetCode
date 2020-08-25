@@ -15,6 +15,7 @@ public class SplitString {
         List<List<String>> res = new ArrayList<>();
         if (len == 0) {
             return res;
+
         }
         Deque<String> stack = new ArrayDeque<>();
         backtracking(s, 0, len, stack, res);
