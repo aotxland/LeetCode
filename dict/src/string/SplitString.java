@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class SplitString {
     public List<List<String>> partition(String s) {
-        int len = s.length();
+        int len = s.length(); 
         List<List<String>> res = new ArrayList<>();
         if (len == 0) {
             return res;
