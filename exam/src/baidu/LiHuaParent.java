@@ -40,13 +40,10 @@ public class LiHuaParent {
             a[i][1] = in.nextInt();
             a[i][2] = in.nextInt();
         }
-        Arrays.sort(a, new Comparator<int[]>() {
-            @Override
-            public int compare(int[] o1, int[] o2) {
-                if (o1[2] != o2[2]) return o2[2] - o1[2];
-                else if (o1[0] != o2[0]) return o1[0] - o2[0];
-                else return o1[1] - o2[1];
-            }
+        Arrays.sort(a, (o1, o2) -> {
+            if (o1[2] != o2[2]) return o2[2] - o1[2];
+            else if (o1[0] != o2[0]) return o1[0] - o2[0];
+            else return o1[1] - o2[1];
         });
         int count = 0;
         for (int i = 0; i < n; i++) {
@@ -58,36 +55,5 @@ public class LiHuaParent {
             }
         }
         System.out.println(count);
-    }
-
-    static void mysort(int[][] a) {
-        for (int i = 0; i < a.length; i++)
-            for (int j = i + 1; j < a.length; j++) {
-                if (a[i][2] < a[j][2]) {
-                    int t = a[i][2];
-                    a[i][2] = a[j][2];
-                    a[j][2] = t;
-                    t = a[i][1];
-                    a[i][1] = a[j][1];
-                    a[j][1] = t;
-                    t = a[i][0];
-                    a[i][0] = a[j][0];
-                    a[j][0] = t;
-                }
-                if (a[i][2] == a[j][2] && a[i][0] > a[j][0]) {
-                    int t = a[i][1];
-                    a[i][1] = a[j][1];
-                    a[j][1] = t;
-                    t = a[i][0];
-                    a[i][0] = a[j][0];
-                    a[j][0] = t;
-                }
-                if (a[i][2] == a[j][2] && a[i][0] == a[j][0] && a[i][1] > a[j][1]) {
-                    int t = a[i][1];
-                    a[i][1] = a[j][1];
-                    a[j][1] = t;
-                }
-            }
-
     }
 }
